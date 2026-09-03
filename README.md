@@ -1,61 +1,305 @@
 # S-PASS (StakePass)
 
-S-PASS (StakePass) is a blockchain-based event attendance and incentive platform built on Avalanche Fuji. It uses refundable attendee stakes and smart-contract-based rewards to encourage event attendance and provide transparent reward distribution.
+> **Turn event attendance into a verifiable financial commitment.**
 
-## Features
+S-PASS is a blockchain-based event attendance and incentive platform designed to reduce no-shows, simplify attendance verification, and make event incentives more transparent.
+
+Built on **Avalanche Fuji**, S-PASS uses a refundable attendee stake: attendees commit a stake when registering and can receive the applicable refund after verified attendance. Event rules can also direct no-show stakes toward defined reward pools, while sponsors can fund attendee incentives.
+
+---
+
+##  The Problem
+
+Event organizers face a recurring problem: **people register, but they do not always show up.**
+
+No-shows can lead to:
+
+- Unused event capacity
+- Unpredictable attendance
+- Manual attendance verification
+- Administrative overhead
+- Difficulty proving participation
+- Inefficient reward and incentive distribution
+
+Traditional registration systems generally record **intent to attend**, not a meaningful commitment to attend.
+
+---
+
+##  The S-PASS Solution
+
+S-PASS introduces a simple attendance commitment:
+
+**Register → Stake → Attend → Verify → Refund → Reward**
+
+1. **Organizer creates an event** and defines the refundable attendance stake.
+2. **Attendee registers** and commits the required stake.
+3. **Attendee checks in** using the event's QR-based attendance flow.
+4. **Attendance is verified** through the smart-contract workflow.
+5. **Eligible attendees receive their applicable stake refund.**
+6. **No-show stakes can be redistributed** according to the event rules.
+7. **Sponsors can fund rewards** for eligible attendees.
+
+The result is a more accountable attendance process with transparent on-chain settlement.
+
+---
+
+##  Ideal Customer Profile
+
+### Primary ICP — Event Organizers
+
+S-PASS is initially focused on organizers running:
+
+- Paid or limited-capacity events
+- Conferences and workshops
+- Community and networking events
+- University and student events
+- Technology and Web3 events
+- Events where no-shows create meaningful costs or operational problems
+
+### Secondary Users
+
+**Attendees** — receive a financial incentive to attend and a transparent participation experience.
+
+**Sponsors** — can fund rewards and incentives for verified attendees.
+
+The initial go-to-market focus is **organizers**, because organizers control event distribution and can bring attendees onto the platform through every event they host.
+
+---
+
+##  Value Proposition
+
+### For organizers
+
+**Reduce no-shows and make attendance verifiable without relying entirely on manual processes.**
+
+### For attendees
+
+**Get rewarded for showing up while retaining eligibility for your refundable stake.**
+
+### For sponsors
+
+**Fund transparent, verifiable attendee incentives.**
+
+---
+
+##  Why Blockchain?
+
+Blockchain is used where it provides a clear advantage:
+
+- Transparent staking and settlement
+- Verifiable attendance-related transactions
+- Programmable refund and reward rules
+- Reduced dependence on a centralized settlement record
+- Portable on-chain transaction history
+
+S-PASS treats blockchain as **infrastructure for trust and settlement**, not as the product's entire value proposition.
+
+---
+
+##  Core Features
+
 - React + TypeScript frontend
-- Solidity smart contracts on Avalanche Fuji
-- Wallet connection and event management
-- Attendee registration with refundable staking
-- QR-based event check-in
-- Automatic stake refunds for checked-in attendees
+- Solidity smart contracts
+- Avalanche Fuji deployment
+- Wallet connection
+- Event creation and management
+- Refundable attendee staking
+- QR-based check-in
+- Attendance verification
+- Automatic stake refund workflow
 - No-show stake redistribution
-- Sponsor-funded attendee rewards
+- Sponsor-funded rewards
 - Organizer, attendee, and sponsor workflows
 
-## Smart contracts
+---
+
+##  Business Model
+
+### Initial revenue model
+
+S-PASS is designed around an **organizer-facing revenue model**, with potential revenue from:
+
+- Transaction/service fees associated with supported event activity
+- Premium organizer features
+- Organizer subscription plans as the platform scales
+- Sponsor and partner reward programs
+
+The initial strategy is to prove value with pilot organizers before optimizing pricing and packaging.
+
+### The economic flywheel
+
+**More organizers → more events → more attendees → more verified attendance activity → stronger network → more organizer value.**
+
+---
+
+##  Go-To-Market Strategy
+
+### Phase 1 — Kenya
+
+Start with communities and organizers where attendance accountability matters.
+
+Initial targets include:
+
+- Technology communities
+- Web3 communities
+- Universities and student organizations
+- Conference and workshop organizers
+- Professional communities
+- Startup and innovation ecosystems
+
+### Phase 2 — Community-led growth
+
+Use successful events as case studies and encourage organizers to refer other organizers.
+
+### Phase 3 — Partnerships
+
+Build distribution through:
+
+- Universities
+- Event communities
+- Technology ecosystems
+- Web3 organizations
+- Event platforms and partners
+- Sponsors and ecosystem programs
+
+---
+
+##  Customer Acquisition Strategy
+
+The first objective is not mass consumer acquisition.
+
+It is to acquire **the first group of high-value organizers**.
+
+### Initial approach
+
+1. Identify organizers with recurring attendance/no-show problems.
+2. Offer a pilot event.
+3. Measure attendance and verification outcomes.
+4. Turn successful pilots into case studies.
+5. Use organizer referrals to acquire additional events.
+6. Expand through community and ecosystem partnerships.
+
+Each organizer can become a distribution channel because every event introduces S-PASS to a new group of attendees.
+
+---
+
+##  Distribution Strategy
+
+S-PASS follows an **organizer-first distribution model**.
+
+Instead of acquiring every attendee individually, S-PASS can acquire users through the organizations and communities already hosting events.
+
+**Organizer → Event → Attendees**
+
+This creates a scalable distribution loop where every successful event can introduce new users to the platform.
+
+---
+
+##  Defensibility
+
+The long-term moat is not simply the smart contracts.
+
+Potential defensibility comes from combining:
+
+- Organizer relationships
+- Historical attendance and participation data
+- Attendee reputation and participation history
+- Growing attendee and organizer network
+- Event-management integrations
+- Sponsor relationships
+- On-chain transaction and verification history
+- Switching costs created by an established event workflow
+
+As the network grows, S-PASS can build a richer layer of **verifiable event participation data** that becomes increasingly difficult for a new entrant to replicate.
+
+---
+
+##  Technical Architecture
 
 The core blockchain logic is implemented in Solidity under `contracts/`.
 
-The contracts handle event management, attendee registration and staking, attendance verification, refunds, no-show redistribution, and sponsor rewards.
+The smart-contract workflow covers:
 
-## Local development
+- Event management
+- Attendee registration
+- Staking
+- Attendance verification
+- Refunds
+- No-show redistribution
+- Sponsor-funded rewards
 
-1. Install dependencies:
+### Technology Stack
 
-   `npm install`
+| Layer | Technology |
+|---|---|
+| Frontend | React + TypeScript |
+| Styling | Tailwind CSS |
+| Smart contracts | Solidity |
+| Blockchain | Avalanche Fuji |
+| Wallet interaction | EVM-compatible wallet |
+| Development | Hardhat |
+| Testing | Hardhat test suite |
+| Deployment | Hardhat |
 
-2. Start the frontend:
+---
 
-   `npm run dev`
+##  Current MVP Status
 
-3. Compile the smart contracts:
+S-PASS is currently a **functional Web3 MVP deployed on Avalanche Fuji testnet**.
 
-   `npm run compile`
+The MVP demonstrates the core attendance and incentive workflow and provides a foundation for further production development.
 
-4. Run the smart contract tests:
+### Current focus
 
-   `npm test`
+- Validate the attendance-staking model
+- Test organizer and attendee workflows
+- Demonstrate transparent blockchain settlement
+- Validate the product with real event organizers
+- Prepare the architecture for future production deployment
 
-5. Build the production frontend:
+### Roadmap
 
-   `npm run build`
+**MVP**
+- Core event workflow
+- Refundable staking
+- Attendance verification
+- QR check-in
+- Sponsor rewards
 
-## Environment variables
+**Next**
+- Production-grade infrastructure
+- Expanded automated testing
+- Security review and smart-contract audit
+- Improved wallet onboarding
+- Unified event data architecture
+- Mainnet readiness
 
-For local blockchain deployment, create a `.env` file containing the required Avalanche Fuji configuration:
+**Future**
+- Organizer analytics
+- Reputation/participation history
+- Larger sponsor ecosystem
+- Event-platform integrations
+- Multi-chain expansion where justified
 
-- `AVALANCHE_FUJI_RPC_URL`
-- `PRIVATE_KEY`
+---
 
-**Never commit your `.env` file, private key, or seed phrase to GitHub.**
+## 🔄 Demo Flow
 
-## Demo flow
-
-1. Connect a wallet.
-2. Create or select an event.
-3. Register for the event and stake the required amount.
-4. Check in using the event QR code.
-5. Receive the applicable stake refund after successful check-in.
-6. Organizers can review attendee attendance.
-7. Sponsors can fund and distribute rewards.
+```text
+Organizer
+   ↓
+Creates Event
+   ↓
+Attendee Registers
+   ↓
+Attendee Stakes
+   ↓
+Event Takes Place
+   ↓
+QR Check-In
+   ↓
+Attendance Verified
+   ↓
+Stake Refund
+   ↓
+Eligible Rewards
